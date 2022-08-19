@@ -10,7 +10,6 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.container}>
-        <h1>This is a home Page</h1>
         <div className="w-full text-xl text-gray-600 first-letter:text-9xl first-letter:text-blue-600">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, labore
           nisi quam dolores recusandae reprehenderit velit sapiente neque
