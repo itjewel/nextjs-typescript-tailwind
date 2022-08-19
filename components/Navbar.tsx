@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
   const [navbar, setNavbar] = useState(false);
@@ -16,11 +17,17 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <header className={`${isScroll && "bg-red-500"}`}>
+    <header className={`${isScroll && "bg-[#4A5568]"}`}>
       <div className="justify-between w-full lg:flex  md:flex ">
         <div className="flex items-center justify-between  md:block">
           <a href="javascript:void(0)">
-            <h2 className="text-2xl font-bold text-white">LOGO</h2>
+            <img
+              className="scale-100 hover:scale-150 ease-in duration-500"
+              src="https://www.product-reviews.net/down/wp-content/uploads/2020/03/netflixlogo.png"
+              alt=""
+              width={80}
+              height={80}
+            />
           </a>
           <div className="md:hidden">
             <button
@@ -28,33 +35,9 @@ const Navbar = () => {
               onClick={() => setNavbar(!navbar)}
             >
               {navbar ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 text-white"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <AiOutlineClose className="h-6 w-6 font-light text-white" />
               ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
+                <AiOutlineMenu className="h-6 w-6 font-light text-white" />
               )}
             </button>
           </div>
@@ -66,16 +49,16 @@ const Navbar = () => {
           }`}
         >
           <ul className="items-center md:px-16 space-y-8 md:flex md:space-x-6 md:space-y-0">
-            <li className="text-white hover:text-indigo-200">
+            <li className="headerLink">
               <a href="javascript:void(0)">Home</a>
             </li>
-            <li className="text-white hover:text-indigo-200">
+            <li className="headerLink">
               <a href="javascript:void(0)">Blog</a>
             </li>
-            <li className="text-white hover:text-indigo-200">
+            <li className="headerLink">
               <a href="javascript:void(0)">About US</a>
             </li>
-            <li className="text-white hover:text-indigo-200">
+            <li className="headerLink">
               <a href="javascript:void(0)">Contact US</a>
             </li>
           </ul>
@@ -87,13 +70,13 @@ const Navbar = () => {
         >
           <a
             href="javascript:void(0)"
-            className="inline-block w-full md:w-40  px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-gray-100 "
+            className="inline-block w-full md:w-32  px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-gray-100 "
           >
             Sign in
           </a>
           <a
             href="javascript:void(0)"
-            className="inline-block w-full mt-3 md:mt-0 md:w-40 px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
+            className="inline-block w-full mt-3 md:mt-0 md:w-32 px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
           >
             Sign up
           </a>

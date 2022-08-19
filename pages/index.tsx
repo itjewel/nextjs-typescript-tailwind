@@ -9,8 +9,8 @@ const Home: NextPage = () => {
         <title>Next typeScript Tailwind</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.container}>
-        <div className="w-full text-xl text-gray-600 first-letter:text-9xl first-letter:text-blue-600">
+      <div className={`${styles.container}`}>
+        <div className="w-full text-xl text-gray-600 first-letter:text-9xl first-letter:text-blue-600 py-16 md:py-28 lg:py-32">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, labore
           nisi quam dolores recusandae reprehenderit velit sapiente neque
           impedit veniam ab incidunt doloremque quibusdam libero? Quisquam eum

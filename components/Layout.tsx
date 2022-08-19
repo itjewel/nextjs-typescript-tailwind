@@ -6,7 +6,7 @@ interface Props {
 }
 export default function Layout({ children }: Props) {
   return (
-    <div className="">
+    <div className="relative">
       <Navbar />
       <main className="flex-grow">{children}</main>
       <Footer />
